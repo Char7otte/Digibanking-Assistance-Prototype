@@ -9,8 +9,8 @@ transferMoneyForm.addEventListener("submit", (e) => {
     if (transferMethod === "transfer") {
         transferee = prompt("Who are you transferring to?");
         transferAmount = prompt(`How much do you want to transfer to ${transferee}?`);
-        alert("Authenticate via fingerprint...");
-        alert(`$${transferAmount} has been sent to ${transferee}!`);
+        alert("Awaiting confirmation...");
+        alert("Sucess!");
     } else if (transferMethod === "transfer-assistance") {
         otp = Math.floor(Math.random() * 1000000) + 100000;
         alert(`Your otp is ${otp}`);
