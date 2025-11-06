@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("./partials/head") %>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <%- include("./partials/navbar") %>
+    <body>
+        <main>
+            <div class="columns">
+                <div class="column auto"></div>
+                <div class="column is-two-fifths">
+                    <section>
+                        <h2 class="subtitle">Login</h2>
+                        <form action="" id="account-login-form">
+                            <div class="field">
+                                <label for="username" class="label">Username</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Username" id="username" name="username" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="password" class="label">Password</label>
+                                <div class="control">
+                                    <input class="input" type="password" placeholder="Password" id="password" name="password" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-link" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <hr />
+                    <section>
+                        <form action="" id="assistance-login-form">
+                            <div class="field">
+                                <label for="otp" class="label">One time password</label>
+                                <div class="control">
+                                    <input class="input" type="password" placeholder="otp" id="otp" name="OTP" />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-link" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <hr />
+                    <section>
+                        <h2 class="title">Welcome, <span class="username-display"></span></h2>
+                        <p>
+                            You currently have: <strong> $<span class="money-amount-display"><%= money%></span></strong>
+                        </p>
+                        <form action="" id="transfer-money-form">
+                            <button class="button is-link" type="submit" name="transfer-submit" value="transfer">Transfer money</button>
+                            <button class="button is-primary" type="submit" name="transfer-submit" value="transfer-assistance">Assistance</button>
+                        </form>
+                    </section>
+                    <hr />
+                    <section>
+                        <h2 class="title">Invest</h2>
+                        <div class="fixed-grid">
+                            <div class="grid">
+                                <div class="card cell">
+                                    <div class="card-content">
+                                        <div class="content">Low risk</div>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="#" class="card-footer-item">Invest</a>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="column auto"></div>
+            </div>
+        </main>
+        <%- include("./partials/footer") %>
+        <script src="./js/account.js"></script>
+        <script src="./js/moneyTransfer.js"></script>
+    </body>
+</html>
