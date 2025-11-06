@@ -1,0 +1,38 @@
+/* overlay to disable the Invest section */
+.invest-wrapper {
+    position: relative;
+}
+
+/* Hide overlay by default; show it only when .active is added */
+.invest-overlay {
+    display: none;
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(255, 255, 255, 0.78);
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.invest-overlay.active {
+    display: flex;
+    pointer-events: auto;
+}
+
+.invest-overlay .overlay-content {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* dim the content under the overlay slightly */
+.invest-wrapper .fixed-grid {
+    filter: grayscale(10%) contrast(95%);
+    opacity: 0.95;
+    pointer-events: none; /* extra safety: prevent interaction with underlying elements */
+}

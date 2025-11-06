@@ -13,9 +13,16 @@ accountLoginForm.addEventListener("submit", (e) => {
 });
 
 const accountAssistanceForm = document.querySelector("#assistance-login-form");
+const investOverlay = document.querySelector(".invest-overlay");
 
 accountAssistanceForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     alert("You are now assisting.");
+    document.querySelector("#transfer-assistance-btn").disabled = true;
+
+    // show the invest overlay when OTP is submitted
+    if (investOverlay) {
+        investOverlay.classList.add("active");
+    }
 });

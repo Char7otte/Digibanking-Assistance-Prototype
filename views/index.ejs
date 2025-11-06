@@ -56,13 +56,21 @@
                         </p>
                         <form action="" id="transfer-money-form">
                             <button class="button is-link" type="submit" name="transfer-submit" value="transfer">Transfer money</button>
-                            <button class="button is-primary" type="submit" name="transfer-submit" value="transfer-assistance">Assistance</button>
+                            <button
+                                class="button is-primary"
+                                type="submit"
+                                name="transfer-submit"
+                                value="transfer-assistance"
+                                id="transfer-assistance-btn"
+                            >
+                                Assistance
+                            </button>
                         </form>
                     </section>
                     <hr />
                     <section>
                         <h2 class="title">Invest</h2>
-                        <div class="fixed-grid">
+                        <div class="fixed-grid invest-wrapper">
                             <div class="grid">
                                 <div class="card cell">
                                     <div class="card-content">
@@ -72,6 +80,9 @@
                                         <a href="#" class="card-footer-item">Invest</a>
                                     </footer>
                                 </div>
+                            </div>
+                            <div class="invest-overlay">
+                                <div class="overlay-content">Investment options are currently disabled.</div>
                             </div>
                         </div>
                     </section>
